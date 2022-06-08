@@ -76,9 +76,9 @@ body {
 }
 
 .key.correct {
-  --hue: 199;
-  --saturation: 100%;
-  --lightness: 50%;
+  --hue: 130;
+  --saturation: 91%;
+  --lightness: 78%;
 }
 
 .guess-grid {
@@ -124,7 +124,7 @@ body {
 
 .tile[data-state="correct"] {
   border: none;
-  background-color: hsl(199, 100%, 50%);
+  background-color: hsl(130, 91%, 78%);
 }
 
 .tile.shake {
