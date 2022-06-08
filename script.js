@@ -1,74 +1,66 @@
 const targetWords = [
-  "storm",
-  "polar",
-  "watch",
-  "gases",
-  "muggy",
-  "ozone",
-  "frost",
-  "proxy",
-  "clear",
-  "shift",
-  "trend",
-  "index",
-  "clime",
-  "sleet",
-  "balmy",
-  "model",
-  "snowy",
-  "slush",
-  "windy",
-  "risks",
-  "front",
-  "snirt",
-  "waves",
-  "earth",
-  "virga",
+  "drive",
+  "eagle",
+  "holes",
+  "patio",
+  "shank",
+  "grips",
+  "Bogey",
+  "gimme",
+  "range",
+  "divot",
   "green",
-  "house",
-  "flood",
-  "curve",
+  "shots",
+  "apron",
+  "swing",
+  "whiff",
+  "scuff",
+  "blade",
+  "shoes",
+  "carry",
   "water",
-  "swell",
-  "gusts",
-  "cloud",
-  "ridge",
-  "vanes",
-  "surge",
-  "adapt",
-  "rainy",
-  "foggy",
-  "thaws",
-  "winds",
-  "shear",
-  "chill",
-  "solar",
-  "graph",
-  "fires",
-  "freon",
-  "ocean",
-  "cycle",
-  "lapse",
-  "front",
-  "zones",
-  "scale",
-  "level",
-  "omega",
-  "radar",
-  "force",
-  "anvil",
-  "globe",
-  "highs",
-  "draft",
-  "warms",
-  "alter",
-  "hydro",
-  "issue",
-  "micro",
-  "rises",
-  "whirl",
-  "smoke",
-  "gauge"
+  "clubs",
+  "rough",
+  "shaft",
+  "fluff",
+  "links",
+  "visor",
+  "glove",
+  "hosel",
+  "irons",
+  "rules",
+  "match",
+  "pitch",
+  "wedge",
+  "putts",
+  "round",
+  "score",
+  "slice",
+  "choke",
+  "wrist",
+  "caddy",
+  "bogey",
+  "gimme",
+  "gross",
+  "hacks",
+  "holed",
+  "punch",
+  "tempo",
+  "snips",
+  "cheat",
+  "match",
+  "score",
+  "flags",
+  "woods",
+  "bounds",
+  "swung",
+  "mashy",
+  "grass",
+  "trees",
+  "hacks",
+  "sport",
+  "tight"
+
 ]
 
 const dictionary = [
@@ -13142,7 +13134,7 @@ const DANCE_ANIMATION_DURATION = 500
 const keyboard = document.querySelector("[data-keyboard]") // get the keyboard
 const alertContainer = document.querySelector("[data-alert-container]") // get the empty div container for alerts
 const guessGrid = document.querySelector("[data-guess-grid]") // get the grid of tiles
-const offsetFromDate = new Date(2022, 4, 27); // starting date
+const offsetFromDate = new Date(2022, 5, 7); // starting date
 const msOffset = Date.now() - offsetFromDate // get difference in milliseconds
 const dayOffset = msOffset / 1000 / 60 / 60 / 24 // convert to days
 const targetWord = targetWords[Math.floor(dayOffset)] // get the word in the array at that index, and every day, a new index
@@ -13294,22 +13286,22 @@ function checkWinLose(guess, tiles) {
   const remainingTiles = guessGrid.querySelectorAll(":not([data-letter])") // get all empty tiles
   if (guess === targetWord) {
     if (remainingTiles.length === 25) {  //quested it in one
-        showAlert("Lucky guess!", 5000)
+        showAlert("HOLE IN ONE!", 5000)
     }
     if (remainingTiles.length === 20) {  //quested it in 2
-        showAlert("Amazing. Are you a climatologist?", 5000)
+        showAlert("EAGLE", 5000)
     }
     if (remainingTiles.length === 15) {  //quested it in 3
-        showAlert("Nicely done. You have some serious climate skills.", 5000)
+        showAlert("BIRDIE", 5000)
     }
     if (remainingTiles.length === 10) {  //quested it in 4
-        showAlert("You did it! I'm impressed you knew this one.", 5000)
+        showAlert("PAR", 5000)
     }
     if (remainingTiles.length === 5) {  //quested it in 5
-        showAlert("Got it. Might want to visit climatedata.ca and brush up on some of the lingo in the glossary though...", 5000)
+        showAlert("BOGEY", 5000)
     }
     if (remainingTiles.length === 0) {  //quested it in 6
-        showAlert("Yikes, that was close. Please ask your manager for some extra training.", 5000)
+        showAlert("DOUBLE BOGEY", 5000)
     }
     danceTiles(tiles)
     stopInteraction()
@@ -13319,7 +13311,7 @@ function checkWinLose(guess, tiles) {
   const remainingTiless = guessGrid.querySelectorAll(":not([data-letter])") // get all empty tiles
 
   if (remainingTiless.length === 0) { // if no more remaining tiles
-    showAlert("🚨RUNAWAY CLIMATE CHANGE DETECTED🚨")
+    showAlert("🚨YOU REACHED YOUR MAX🚨")
     showAlert(`You can always try again, unlike the real Wordle!`, null)
     stopInteraction
   }
