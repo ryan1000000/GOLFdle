@@ -1,4 +1,5 @@
 const targetWords = [
+  "golfs",
   "drive",
   "eagle",
   "holes",
