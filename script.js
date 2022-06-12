@@ -59,7 +59,11 @@ const targetWords = [
   "trees",
   "hacks",
   "sport",
-  "tight"
+  "tight",
+  "drive",
+  "eagle",
+  "holes",
+  "patio"
 
 ]
 
